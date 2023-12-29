@@ -1,0 +1,367 @@
+/*
+#banner {
+  width: 100%;
+  height: 200px;
+  background-color: rgba(14, 14, 14, 0.553);
+  color: #ffcc01;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  margin: 0 auto;
+  opacity: 2.0;
+  font-family: 'Montserrat';
+  font-weight: 200;
+  letter-spacing: 2px;
+}
+*/
+
+
+.pokemon-bulbasaur {
+  background-image: url('../resources/bulbasaur.webp');
+  height: 600px;
+  width:700px;
+  position: fixed;
+  bottom:180px;
+  left: 1180px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  visibility: hidden;
+}
+.pokemon-charmander {
+  background-image: url('../resources/charmander.gif');
+  height: 700px;
+  width:700px;
+  position: fixed;
+  bottom:120px;
+  left: 1060px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  visibility: hidden;
+}
+
+.pokemon-squirtle {
+  background-image: url('../resources/squirtle.gif');
+  height: 700px;
+  width:700px;
+  position: fixed;
+  bottom:120px;
+  left: 1000px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  visibility: hidden;
+}
+
+@keyframes wiggle {
+  0%, 100% {
+      transform: rotate(0deg);
+  }
+  25% {
+      transform: rotate(-3deg);
+  }
+  50% {
+      transform: rotate(0deg);
+      translate: -50px;
+  }
+  75% {
+      transform: rotate(-5deg);
+  }
+}
+
+.wiggle-animation {
+  animation: wiggle 0.8s ease-in-out;
+}
+
+
+#enemyPokemon {
+  height:370px;
+  position: fixed;
+  bottom: 280px;
+  left: 260px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: scaleX(-1)
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+}
+
+html,
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  background-image: url('../resources/arena.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.image-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; /* Center items vertically */
+  margin-top: auto;
+  margin-bottom: auto;
+  position: relative;
+  /* background-image: url('resources/battleField.png');*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 50vh;
+}
+
+.background-image {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+#questions {
+  border: 0 solid #df7c51f4;
+  box-sizing: border-box;
+  color: white;
+  font-family: 'Montserrat';
+  text-align: center;
+  width: 90%;
+  height:100px;
+  max-width: 900px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  margin: auto; 
+  margin-top: 20px; 
+  border-radius: 10px;
+  display: block;
+  justify-content: space-between;
+ 
+}
+
+
+
+#questions:focus {
+  outline: 0;
+
+}
+
+.button-53 {
+  background-color: #dca500;
+  border: 0 solid #b75b34f4;
+  box-sizing: border-box;
+  color: white;
+  font-family: 'Montserrat';
+  font-size: 1rem;
+  font-weight: 400;
+  justify-content: center;
+  line-height: 1.75rem;
+  padding: 0.75rem 1.65rem;
+  text-align: center;
+  text-decoration: none #000000 solid;
+  text-decoration-thickness: auto;
+  width: 400px;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-left: 30px;
+}
+
+.button-53:focus {
+  outline: 0;
+}
+
+.button-53:after {
+  content: "";
+  position: absolute;
+  border: 1px solid #000000;
+  bottom: 4px;
+  left: 4px;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+}
+
+.button-53:hover:after {
+  bottom: 2px;
+  left: 2px;
+}
+
+@media (min-width: 768px) {
+  .button-53 {
+    padding: 0.75rem 3rem;
+    font-size: 1.25rem;
+  }
+}
+
+#trivia {
+  background-color: #00000080;
+  height: 300px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  align-content: space-between;
+}
+
+
+#answers{
+  display:flex;
+  justify-content: space-between;
+  width:1000px;
+  position: absolute;
+  left: 50%;
+  margin-top:20px;
+  transform: translateX(-50%);
+}
+
+
+/*
+
+FLAMES ANIMATION
+
+html,body { background: #222; padding: 0; margin: 0; bottom: 0px; }
+canvas {
+  width: 100%;
+  height: 100%;
+  max-height: 400px
+  
+}
+.padded {
+  background: #111;
+  padding: 0 10%;
+}
+*/
+
+
+img.pokemon {
+  width: 50px;
+  height: 50px;
+  content: url("https://i.ebayimg.com/images/g/B~gAAOSwhNthhdjn/s-l1200.webp");
+  position: fixed;
+  left: -50px; /* Initial position outside the view on the left */
+  top: 25px; /* Initial position with a distance of 25px from the top */
+}
+#final{
+  height: 400px;
+  width: 800px;
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color:#00000099;
+  z-index:1;
+  visibility: hidden;
+}
+
+@keyframes wiggleReversed {
+  0%,
+  100% {
+    transform: rotate(0deg) scaleX(-1);
+  }
+  25% {
+    transform: rotate(-3deg) scaleX(-1);
+  }
+  50% {
+    transform: rotate(0deg) scaleX(-1);
+    translate: 50px;
+  }
+  75% {
+    transform: rotate(-5deg) scaleX(-1);
+  }
+}
+.wiggle-animation-reversed {
+  animation: wiggleReversed 0.8s ease-in-out;
+}
+@keyframes takeDMG {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+.takeDMG-animation {
+  animation: takeDMG 0.5s ease-in-out 2; /* Adjust the duration and timing function as needed */
+}
+
+.index-button {
+  border: 2px solid currentColor;
+  border-radius: 0rem;
+  margin-left: 60px;
+  margin-top: 40px;
+  width: 300px;
+  height: 100px;
+  color: #2871b9;
+  font-family: 'Montserrat';
+  font-size: 50px;
+  font-weight: 800;
+  overflow: hidden;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  transition: 0.2s transform ease-in-out;
+  will-change: transform;
+  z-index: 0;
+  position: absolute;
+  top: 50%;
+  left: 25%;
+}
+
+.index-button::after {
+  background-color: #ffcc01;
+  border-radius: 0rem;
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-100%, 0) rotate(10deg);
+  transform-origin: top left;
+  transition: 0.2s transform ease-out;
+  will-change: transform;
+  z-index: -1;
+}
+
+.index-button:hover::after {
+  transform: translate(0, 0);
+}
+
+.index-button:hover {
+  border: 2px solid transparent;
+  color: #2871b9;
+  transform: scale(1.05);
+  will-change: transform;
+}
+
+.lostWon{
+  font-family: 'Montserrat';
+  padding-top:70px;
+  font-size: 80px;
+  color:#efefef;
+  z-index: 2;
+}
+
+.tryAgain{
+  font-size:30px;
+  z-index: 2;
+}
+
+.wonButton{
+  width:600px;
+  left:44px;
+}

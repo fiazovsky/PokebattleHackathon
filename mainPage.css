@@ -1,0 +1,307 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+}
+
+.full-page {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url('resources/background.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(20px);
+    pointer-events: none;
+}
+
+.content {
+    background-color: #00000050;
+    height: 700px;
+    width: 1640px;
+    position: relative;
+}
+
+.title {
+    font-family: 'Montserrat';
+    font-size: 100px;
+    padding-top: 40px;
+    padding-left: 60px;
+    letter-spacing: 4px;
+    margin: 0px;
+    color: #efefef;
+    text-transform: uppercase;
+    font-weight: 200;
+}
+
+p {
+    font-weight: 300;
+    width: 800px;
+    font-size: 18px;
+    color: #efefef;
+    font-family: 'Montserrat';
+}
+
+.text {
+    margin-left: 60px;
+    margin-top: 60px;
+    font-size: 22px;
+}
+
+.press-play {
+    display: inline-block;
+    margin-left: 0px;
+    margin-top: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffcc01;
+}
+
+.index-button {
+    border: 2px solid currentColor;
+    border-radius: 0rem;
+    margin-left: 60px;
+    margin-top: 40px;
+    width: 300px;
+    height: 100px;
+    color: #2871b9;
+    font-family: 'Montserrat';
+    font-size: 50px;
+    font-weight: 800;
+    overflow: hidden;
+    padding: 1rem 2rem;
+    position: relative;
+    text-decoration: none;
+    transition: 0.2s transform ease-in-out;
+    will-change: transform;
+    z-index: 0;
+}
+
+.index-button::after {
+    background-color: #ffcc01;
+    border-radius: 0rem;
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-100%, 0) rotate(10deg);
+    transform-origin: top left;
+    transition: 0.2s transform ease-out;
+    will-change: transform;
+    z-index: -1;
+}
+
+.index-button:hover::after {
+    transform: translate(0, 0);
+}
+
+.index-button:hover {
+    border: 2px solid transparent;
+    color: #2871b9;
+    transform: scale(1.05);
+    will-change: transform;
+}
+
+.pokemon-bulbasaur {
+    background-image: url('resources/bulbasaur.webp');
+    height: 600px;
+    width: 700px;
+    position: fixed;
+    bottom: 150px;
+    left: 1060px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    visibility: hidden;
+}
+
+.pokemon-charmander {
+    background-image: url('resources/charmander.gif');
+    height: 700px;
+    width: 700px;
+    position: fixed;
+    bottom: 120px;
+    left: 1060px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    visibility: hidden;
+}
+
+.pokemon-squirtle {
+    background-image: url('resources/squirtle.gif');
+    height: 700px;
+    width: 700px;
+    position: fixed;
+    bottom: 120px;
+    left: 1000px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    visibility: hidden;
+}
+
+.music {
+    margin-left: 60px;
+    margin-top: 40px;
+    width: 60px;
+    display: inline-block;
+    padding: 0px;
+    margin-right: -10px;
+}
+
+.musicBtn {
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.choose-pokemon {
+    height: 600px;
+    width: 1000px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    background-color: #FFFFFF90;
+    z-index: 1;
+}
+
+.starters {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Montserrat';
+    font-size: 50px;
+    font-weight: 300;
+    margin-top: 100px;
+    color: #116e0c;
+}
+
+.card {
+    width: 200px;
+    height: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 36px;
+    perspective: 2500px;
+    margin: 0 50px;
+    margin-top: -300px;
+}
+
+.cover-image {
+    width: 200px;
+    height: 300px;
+    object-fit: contain;
+}
+
+.wrapper {
+    transition: all 0.5s;
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    z-index: -1;
+}
+
+
+.card:hover .wrapper {
+    transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+}
+
+.card:hover .cover-image {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.wrapper::before,
+.wrapper::after {
+    content: "";
+    opacity: 0;
+    width: 200px;
+    height: 80px;
+    transition: all 0.5s;
+    position: absolute;
+    left: 0;
+}
+
+.wrapper::before {
+    top: 0;
+    height: 80px;
+}
+
+.wrapper::after {
+    bottom: 5px;
+    opacity: 1;
+}
+
+.card:hover .wrapper::before,
+.wrapper::after {
+    opacity: 1;
+}
+
+.card:hover .wrapper::after {
+    width: 200px;
+    height: 300px;
+    left: auto;
+    right: 0px;
+    bottom: -28px;
+    background-image: url('resources/pokeball-open.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 0px;
+    margin: 0px;
+}
+
+.card:hover .title {
+    transform: translate3d(0%, -50px, 100px);
+}
+
+.character {
+    width: 190px;
+    opacity: 0;
+    transition: all 0.5s;
+    position: absolute;
+    z-index: -1;
+    margin-bottom: 60px;
+}
+
+.card:hover .character {
+    opacity: 1;
+    transform: translate3d(0%, -30%, 100px);
+}
+
+.starters {
+    margin-top: 400px;
+
+}
+
+.pokemon-walk {
+    width: 170px;
+    height: 170px;
+    background-image: url('resources/pikachu.gif');
+    background-size:contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 6px;
+    left: 100px;
+    visibility: hidden;
+}
+
+
+.flipped {
+    transform: scaleX(-1);
+}
